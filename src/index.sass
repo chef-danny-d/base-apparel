@@ -1,0 +1,80 @@
+$soft: hsl(0, 36%, 70%)
+$hard: hsl(0, 93%, 68%)
+$dark: hsl(0, 6%, 24%)
+$gradient-soft-to-hard: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%))
+$gradient-hard-to-soft: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%))
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap')
+    
+@import 'small'
+body
+    margin: 0  
+    font-size: 16px
+    font-family: 'Josefin Sans', sans-serif
+    background-image: $gradient-soft-to-hard
+    min-height: 100vh
+.header
+    min-height: 3em
+    padding: 2em 3em
+.banner
+    background-image: url('./assets/images/hero-mobile.jpg')
+    min-height: 33vh
+    width: 100%
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: cover
+.container
+    margin-top: 5em
+    margin-left: auto
+    margin-right: auto
+    width: 80%
+    text-align: center
+    &--para
+        line-height: 1.75em
+        color: $soft
+        letter-spacing: 0.05em
+.big
+    display: block
+    font-size: 3em
+    text-transform: uppercase
+    text-align: center
+    letter-spacing: 0.3em
+    &__pink
+        color: $soft
+        font-weight: 300
+    &__black
+        color: $dark
+        font-weight: 500
+        margin-bottom: 0.5em
+.form
+    width: 100%
+    position: relative
+    margin-top: 2em
+    &--input
+        width: -webkit-fill-available
+        border-radius: 3em
+        padding: 1em 2em
+        line-height: 2.5em
+        border: transparentize($dark, 0.75) solid 1.25px
+        background-color: transparent
+        &::placeholder
+            color: $soft
+            font-size: 1.2em
+            opacity: 0.5
+            letter-spacing: 0.025em
+            font-family: 'Josefin Sans', sans-serif
+        &:focus
+            outline: 0
+            border: $dark solid 1.25px
+    &--btn
+        position: absolute
+        right: 0
+        top: 0
+        color: white
+        border-radius: 3em
+        height: 100%
+        padding: 0 0.85em
+        font-size: 2.5em 
+        background-image: $gradient-hard-to-soft
+        border-width: 0
+        box-shadow: 0px 0.2em 20px 0px transparentize($soft, 0.2)
